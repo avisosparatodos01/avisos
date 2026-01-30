@@ -21,7 +21,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: url('https://avisosparatodos01.github.io/avisos/fundo.png'); 
+            background-image: url('fundo.png'); 
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -91,7 +91,7 @@
     <div class="overlay"></div>
 
     <div class="credits-container">
-        <div class="scrolling-text">
+        <div id="text-scroll" class="scrolling-text">
             <h1>Grande Novidade</h1>
             <p>Atenção moradores de <span class="highlight">Wanderley, Bahia</span>.</p>
             <br>
@@ -109,6 +109,13 @@
             </div>
         </div>
     </div>
+
+    <script>
+        const text = document.getElementById('text-scroll');
+        text.addEventListener('animationend', () => {
+            window.location.href = 'https://avisosparatodos01.github.io/avisos/fundo.png';
+        });
+    </script>
 
 </body>
 </html>
